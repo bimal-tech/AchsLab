@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 5</title>
+</head>
+
+<body>
+    <label for="">Number1</label>
+    <input type="text">
+    <br>
+    <label for="">Number2</label>
+    <input type="text">
+    <br><br>
+    <button>Calculate</button>
+    <script>
+        let calculate_btn = document.querySelector('button');
+        calculate_btn.addEventListener('mouseover', function () {
+            let all_numbers = document.querySelectorAll('input');
+            num1 = all_numbers[0].value;
+            num2 = all_numbers[1].value;
+            let hcf = findHCF(num1, num2);
+            console.log(`HCF is ${hcf}`);
+        });
+
+        function findHCF(num1, num2) {
+            let hcf = 1;
+            // Loop from 1 to the smaller of num1 and num2
+            for (let i = 1; i <= Math.min(num1, num2); i++) {
+                // If i is a factor of both num1 and num2, set hcf to i
+                if (num1 % i === 0 && num2 % i === 0) {
+                    hcf = i;
+                }
+            }
+            return hcf;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program1</title>
+</head>
+
+<body>
+    <input type="number">
+    <button id="save-id" class="save-class">
+        Save
+    </button>
+    <ul class="my_list">
+    </ul>
+    <script>
+        // a program to copy the value of an input field and display the value as a list using proper event handling
+
+        var savebtn = document.getElementById("save-id");
+        savebtn.addEventListener("click", function () {
+            let my_value = document.querySelector("input").value;
+            let new_li = document.createElement("li");
+            new_li.innerHTML = my_value;
+            document.querySelector('.my_list').appendChild(new_li);
+          
+        });
+    </script>
+</body>
+
+</html>
