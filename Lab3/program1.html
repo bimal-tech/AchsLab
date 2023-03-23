@@ -23,8 +23,11 @@
             let my_value = document.querySelector("input").value;
             let new_li = document.createElement("li");
             new_li.innerHTML = my_value;
-            document.querySelector('.my_list').appendChild(new_li);
-          
+            // document.querySelector('.my_list').appendChild(new_li);
+
+            let new_li2 = document.createElement("li");
+            new_li2.innerHTML = my_value;
+            document.querySelector('.my_list').append(new_li, new_li2);
         });
     </script>
 </body>

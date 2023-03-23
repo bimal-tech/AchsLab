@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <h1>The Element Object</h1>
+    <h2>The removeChild() Method</h2>
+
+    <p>Click "Remove" to remove the first item from the list:</p>
+    <button onclick="myFunction()">Remove</button>
+
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <script>
+        function myFunction() {
+            let list = document.getElementById("myList");
+            optn = document.querySelector('li');
+            list.removeChild(optn);
+        }
+    </script>
+
+</body>
+
+</html>
