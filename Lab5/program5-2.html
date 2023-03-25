@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color picker</title>
+    <style>
+        .div-container {
+            display: flex;
+        }
+
+        .div-container input {
+            margin-right: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>
+        This text changes color
+    </h3>
+    <div class="div-container">
+        <input type="color" class="color-picker">
+        <button> Change color</button>
+    </div>
+    <script>
+        let my_btn = document.querySelector('button');
+        my_btn.onclick = () => {
+            let color = document.querySelector('input');
+            let text = document.querySelector('h3');
+            text.style.color = color.value;
+        }
+        let mycolor = document.querySelector('input');
+    </script>
+</body>
+
+</html>
