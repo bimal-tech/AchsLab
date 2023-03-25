@@ -14,10 +14,15 @@
     
     
     <script>
+
+        // it takes formValue and tableInfo
+        let formValue = document.querySelector("#number");
+        let tableInfor = document.getElementById("table");
+
         function generateTable() {
-            const num = parseInt(document.getElementById("number").value);
+            const num = parseInt(formValue.value);
             if (isNaN(num)) {
-                document.getElementById("table").innerHTML = "Invalid input!";
+                table.innerHTML = "Invalid input!";
             } else {
                 let tableHTML = "";
                 for (let i = 1; i <= 10; i++) {
@@ -25,6 +30,8 @@
                 }
                 document.getElementById("table").innerHTML = tableHTML;
             }
+            // that removes the input formValue as soon as we generate
+            formValue.value = "";
         }
     </script>
 </body>
